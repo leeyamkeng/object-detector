@@ -1,4 +1,5 @@
 # Import the required modules
+
 from skimage.transform import pyramid_gaussian
 from skimage.io import imread
 from skimage.feature import hog
