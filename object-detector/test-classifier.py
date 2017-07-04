@@ -94,7 +94,7 @@ if __name__ == "__main__":
     clone = im.copy()
     for (x_tl, y_tl, _, w, h) in detections:
         # Draw the detections
-        cv2.rectangle(im, (x_tl, y_tl), (x_tl+w, y_tl+h), (0, 0, 0), thickness=2)
+        cv2.rectangle(im, (x_tl, y_tl), (x_tl + w, y_tl + h), (0, 0, 0), thickness = 2)
     cv2.imshow("Raw Detections before NMS", im)
     cv2.waitKey()
 
@@ -104,6 +104,6 @@ if __name__ == "__main__":
     # Display the results after performing NMS
     for (x_tl, y_tl, _, w, h) in detections:
         # Draw the detections
-        cv2.rectangle(clone, (x_tl, y_tl), (x_tl+w,y_tl+h), (0, 0, 0), thickness=2)
+        cv2.rectangle(clone, (x_tl, y_tl), (x_tl + w, y_tl + h), (0, 0, 0), thickness = 2)
     cv2.imshow("Final Detections after applying NMS", clone)
     cv2.waitKey()
